@@ -1,11 +1,10 @@
-import {Pool} from 'pg'
-
-const pool = new Pool({
+import pkg from 'pg'
+const {Pool} = pkg;
+// 
+export const pool = new Pool({
     user: 'postgres',
     password: 'admin',
     host: 'localhost',
-    port: '8002',
+    port: 5432,
     database: 'perntodo'
 })
-
-module.exports = pool;
